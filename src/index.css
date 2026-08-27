@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --text: hsl(267, 8%, 65%);
+  --text-h: hsl(257, 37%, 96%);
+  --bg: #fff;
+  --border: #e5e4e7;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+
+  color: var(--text);
+  background: var(--bg);
+  
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  
+} */
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  
+}

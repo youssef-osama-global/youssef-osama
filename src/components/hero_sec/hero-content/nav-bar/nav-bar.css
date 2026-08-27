@@ -1,0 +1,61 @@
+header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(60rem, 80%);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08); /*rgba(17, 17, 17, 0.25)*/
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+  font-size: 24px;
+  color: hsl(267, 8%, 85%);
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 100%; 
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(3px); /*برعاية ال OCD*/
+}
+
+header nav ul li {
+  align-self: flex-end;
+  height: 100%;
+}
+
+header nav ul a {
+  display: flex;
+  text-decoration: none;
+  color: hsl(267, 8%, 60%);
+  transition: all 0.3s ease-in-out;
+  align-items: flex-end;
+  height: 100%;
+  
+}
+
+header nav ul a:hover {
+  color: hsl(267, 8%, 85%);
+  transition: all 0.3s ease-in-out;
+}
