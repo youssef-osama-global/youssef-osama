@@ -15,11 +15,21 @@ header {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  z-index: 999;
 }
 
 .logo {
   font-size: 24px;
   color: hsl(267, 8%, 85%);
+  transition: all 300ms ease, -webkit-text-fill-color 0ms ease;
+}
+
+.logo:hover {
+  -webkit-text-stroke-color: hsl(267, 8%, 85%);
+  -webkit-text-stroke-width: 1px;
+
+  -webkit-text-fill-color: transparent;
+  transition: all 300ms ease, -webkit-text-fill-color 0ms ease;
 }
 
 .logo-wrapper {
@@ -28,21 +38,82 @@ header {
   gap: 1.75rem;
 }
 
+header nav {
+  height: 50px;
+
+  anchor-name: --hovered-item;
+
+  li:hover {
+    anchor-name: --hovered-item;
+  }
+  
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--surface);
+    top: calc(anchor(bottom) - 4px);
+    left: calc(anchor(left) + .5rem);
+    right: calc(anchor(right) + .5rem);
+    bottom: calc(anchor(bottom) + 1px);
+    /* top: anchor(top); */
+    position-anchor: --hovered-item;
+    transition: all 300ms ease;
+
+    corner-shape: squircle;
+    border-radius: 999px;
+
+    transform: translateY(1px); /*OCD v2.0 :D*/
+
+    z-index: -1;
+  }
+
+  &:has(li:hover)::after {
+    top: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    transition: all 500ms linear(
+      0, 
+      0.441 7.4%, 
+      0.779 15.3%, 
+      1.015 23.7%, 
+      1.098 28.2%, 
+      1.158 32.9%, 
+      1.188 36.6%, 
+      1.207 40.6%, 
+      1.213 44.8%, 
+      1.208 49.3%, 
+      1.175 57.7%, 
+      1.032 82.8%, 
+      1.007 91.2%, 
+      1); /*easing wizard*/
+  }
+  
+}
+
 header nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   height: 100%; 
-  gap: 15px;
+  /* gap: 15px; */
   margin: 0;
   padding: 0;
-  transform: translateY(3px); /*برعاية ال OCD*/
+  transform: translateY(2.5px); /*برعاية ال OCD :)*/
 }
 
 header nav ul li {
-  align-self: flex-end;
-  height: 100%;
+  height: 70%;
+  padding-inline: .8rem;
+}
+
+header nav ul li:hover {
+  a {
+    color: hsl(267, 8%, 85%);
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 header nav ul a {
@@ -50,7 +121,7 @@ header nav ul a {
   text-decoration: none;
   color: hsl(267, 8%, 60%);
   transition: all 0.3s ease-in-out;
-  align-items: flex-end;
+  align-items: center;
   height: 100%;
   
 }
@@ -58,4 +129,33 @@ header nav ul a {
 header nav ul a:hover {
   color: hsl(267, 8%, 85%);
   transition: all 0.3s ease-in-out;
+}
+
+.header-social-icons {
+  margin-left: auto;
+}
+
+.header-social-icons ul {
+  list-style: none;
+  display: flex;
+  gap: .5rem;
+
+}
+
+.header-social-icons ul li {
+  background: var(--surface);
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+}
+
+.header-social-icons ul li a {
+  text-decoration: none;
+  color: hsl(267, 8%, 85%);
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center; /*مش حاسه overkill*/
 }

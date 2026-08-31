@@ -85,7 +85,7 @@ const fragment = `
 `;
 
 const Particles = ({
-  /*default val.*/
+  /*default val., react bits props BTW :)*/
   particleCount = 200,
   particleSpread = 10,
   speed = 0.1,

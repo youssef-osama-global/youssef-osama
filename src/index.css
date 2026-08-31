@@ -11,6 +11,7 @@
   --text-h: hsl(257, 37%, 96%);
   --bg: #fff;
   --border: #e5e4e7;
+  --surface: rgb(26 26 26 / 0.7);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
