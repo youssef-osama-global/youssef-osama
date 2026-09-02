@@ -8,3 +8,6 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+
+/*TODO: uninstall the bootstrap and react bootstrap IF I didnt use them*/

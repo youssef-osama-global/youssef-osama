@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import './nav-bar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub , faLinkedin, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
 
 function NavBar() {
   
@@ -19,15 +21,16 @@ function NavBar() {
         </div>
         <div className="header-social-icons">
           <ul>
-            <li><a href="">t</a></li>
-            <li><a href="">r</a></li>
-            <li><a href="">k</a></li>
+            <li><a href=""><FontAwesomeIcon icon={faWhatsapp} /></a></li>
+            <li><a href=""><FontAwesomeIcon icon={faLinkedin} /></a></li>
+            <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
           </ul>
-        </div> {/*TODO: install : npm i @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
- , to import the icons for social media*/}
-        <div className="side-nav"></div>
-
+        </div>
+        <div className="side-nav-btn"></div>
       </header>
+      <div className="side-nav">
+
+      </div>
     </>
   )
 };

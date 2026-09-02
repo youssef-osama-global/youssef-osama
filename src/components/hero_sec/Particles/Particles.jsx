@@ -90,9 +90,9 @@ const Particles = ({
   particleSpread = 10,
   speed = 0.1,
   particleColors,
-  moveParticlesOnHover = false,
+  moveParticlesOnHover = false, /* DONT CHANGE */
   particleHoverFactor = 1,
-  alphaParticles = false,
+  alphaParticles = true, /*for smothness of the paticles*/
   particleBaseSize = 100,
   sizeRandomness = 1,
   cameraDistance = 20,
