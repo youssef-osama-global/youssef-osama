@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import './nav-bar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub , faLinkedin, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import { faBars, faXmark} from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
   
+  const [sideBarOpened, setSideBar] = useState(false);
   
   return(
     <>
@@ -26,10 +28,18 @@ function NavBar() {
             <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
           </ul>
         </div>
-        <div className="side-nav-btn"></div>
+        <div className="side-nav-btn"><FontAwesomeIcon icon={faBars} /></div>
       </header>
-      <div className="side-nav">
 
+      <div className="side-nav">
+        <div className="side-nav-close-btn"><FontAwesomeIcon icon={faXmark} /></div>
+        <nav>
+            <ul>
+              <li><a href="#">about</a></li>
+              <li><a href="#">skills</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>
       </div>
     </>
   )

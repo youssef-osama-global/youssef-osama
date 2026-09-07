@@ -34,38 +34,70 @@ header {
 }
 
 .logo a {
-  position: relative;
-  display: inline-block;
+  anchor-name: --logo;
+  
   font-weight: 600;
   color: hsl(267, 8%, 85%);
-  transition: all 280ms cubic-bezier(.2,.9,.2,1);
   animation: floatIn 700ms ease both, color 0ms ease;
-}
-
-.logo a:hover {
-  opacity: 0;
-  transition: all 650ms ease, color 0ms ease;
 }
 
 .logo a::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  bottom: -11px;
+  position-anchor: --logo;
+  top: calc(anchor(bottom) + 5px);
+  left: calc(anchor(left) + .1rem);
+  right: calc(anchor(right) + .1rem);
+  bottom: calc(anchor(bottom) - 8px);
   background: linear-gradient(90deg, hsl(270, 3%, 27%), hsl(280, 2%, 24%));
   border-radius: 999px;
   transform-origin: left center;
   transform: scaleX(0);
   animation: lineDraw 900ms ease 250ms both;
+  z-index: -1;
+  corner-shape: squircle;
+  border-radius: 999px;
+  transition: all 500ms linear(
+      0, 
+      0.441 7.4%, 
+      0.779 15.3%, 
+      1.015 23.7%, 
+      1.098 28.2%, 
+      1.158 32.9%, 
+      1.188 36.6%, 
+      1.207 40.6%, 
+      1.213 44.8%, 
+      1.208 49.3%, 
+      1.175 57.7%, 
+      1.032 82.8%, 
+      1.007 91.2%,
+      1); /*easing wizard*/
 }
 
 
 .logo a:hover::after {
   transform: scaleX(1.06);
-  transition: all 650ms ease;
+  top: anchor(top);
+  left: calc(anchor(left) - .3rem);
+  right: calc(anchor(right) - .3rem);
+  bottom: anchor(bottom);
+  transition: all 500ms linear(
+    0, 
+    0.441 7.4%, 
+    0.779 15.3%, 
+    1.015 23.7%, 
+    1.098 28.2%, 
+    1.158 32.9%, 
+    1.188 36.6%, 
+    1.207 40.6%, 
+    1.213 44.8%, 
+    1.208 49.3%, 
+    1.175 57.7%, 
+    1.032 82.8%, 
+    1.007 91.2%, 
+    1); /*easing wizard again :)*/
 }
+
 
 
 @keyframes lineDraw {
@@ -127,7 +159,6 @@ header nav {
     z-index: -1;
     animation: lineDraw 500ms ease-in 1100ms both;
 
-    transition: all 300;
   }
 
   &:has(li:hover)::after {
@@ -149,7 +180,7 @@ header nav {
       1.175 57.7%, 
       1.032 82.8%, 
       1.007 91.2%, 
-      1); /*easing wizard*/
+      1); /*easing wizard again XD*/
   }
   
 }
@@ -243,6 +274,10 @@ header nav ul a:hover {
   }
 }
 
+.side-nav-btn {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .header-social-icons ul li {
     width: 35px;
@@ -254,6 +289,48 @@ header nav ul a:hover {
   }
 }
 
+/*side bar breakpoint*/
+
+@media (max-width: 700px) {
+  .side-nav-btn {
+    display: none;
+    cursor: pointer;
+
+  }
+
+
+}
+
+/*----------------side nav------------------*/
+
+.side-nav {
+  display: flex;
+  position: fixed;
+
+  height: 100vh;
+   background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 999;
+
+  top: 0;
+  right: 0;
+
+}
+
+.side-nav nav ul {
+  list-style: none;
+}
+
+.side-nav nav ul li a {
+  text-decoration: none;
+  color: hsl(267, 8%, 60%);
+}
+
 /*TODO: ADD break point at 750px for side nav bar*/
 
-/*TODO: DONT forget >300px*/
+/*TODO: DONT forget >300px screens*/
+
+/*TODO: change the color of the logo blob*/
