@@ -306,9 +306,12 @@ header nav ul a:hover {
 .side-nav {
   display: flex;
   position: fixed;
+  flex-direction: column;
 
   height: 100vh;
-   background: rgba(255, 255, 255, 0.08);
+  gap: 1rem;
+  width: 20%;
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
@@ -318,6 +321,12 @@ header nav ul a:hover {
   top: 0;
   right: 0;
 
+
+
+}
+
+.side-nav.closed {
+  transform: translateX(calc(99%));
 }
 
 .side-nav nav ul {

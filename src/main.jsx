@@ -11,3 +11,5 @@ createRoot(document.getElementById('root')).render(
 
 
 /*TODO: uninstall the bootstrap and react bootstrap IF I didnt use them*/
+
+/*TODO: creating custom scroll bar for the whole page*/

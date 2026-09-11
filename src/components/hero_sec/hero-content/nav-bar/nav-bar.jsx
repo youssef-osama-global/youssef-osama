@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import './nav-bar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub , faLinkedin, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +7,10 @@ import { faBars, faXmark} from '@fortawesome/free-solid-svg-icons';
 function NavBar() {
   
   const [sideBarOpened, setSideBar] = useState(false);
+
+  useEffect(() => {
+    
+  }, [])
   
   return(
     <>
@@ -31,7 +35,7 @@ function NavBar() {
         <div className="side-nav-btn"><FontAwesomeIcon icon={faBars} /></div>
       </header>
 
-      <div className="side-nav">
+      <div className={sideBarOpened ? "side-nav" : "side-nav closed"}>
         <div className="side-nav-close-btn"><FontAwesomeIcon icon={faXmark} /></div>
         <nav>
             <ul>
