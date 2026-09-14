@@ -12,7 +12,7 @@ function Hero() {
         particleCount={200}
         particleSpread={10}
         speed={0.1}
-        particleBaseSize={100}
+        particleBaseSize={110} /*TODO: may change to 100 or more in range(100, 160)*/
         moveParticlesOnHover={false} /* DONT CHANGE !!*/
         alphaParticles={true} /*for smothness of the paticles*/
         disableRotation={false}
