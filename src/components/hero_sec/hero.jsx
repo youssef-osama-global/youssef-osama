@@ -15,7 +15,7 @@ function Hero() {
         particleBaseSize={110} /*TODO: may change to 100 or more in range(100, 160)*/
         moveParticlesOnHover={false} /* DONT CHANGE !!*/
         alphaParticles={true} /*for smothness of the paticles*/
-        disableRotation={false}
+        disableRotation={false} /* TODO: dont know if to keep it or not, but if it is true ill make speed 0.3 */
         pixelRatio={1}
         backgroundColor="#1a1a1a"
         />

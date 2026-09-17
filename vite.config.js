@@ -6,3 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/youssef-osama/',
 })
+
+/* TODO: add : build: { sourcemap: true, minify: false, cssCodeSplit: false } 
+ if the build proplem is still existing*/

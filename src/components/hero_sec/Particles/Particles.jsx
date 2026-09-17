@@ -93,13 +93,13 @@ const Particles = ({
   moveParticlesOnHover = false, /* DONT CHANGE */
   particleHoverFactor = 1,
   alphaParticles = true, /*for smothness of the paticles*/
-  particleBaseSize = 100,
+  particleBaseSize = 110,
   sizeRandomness = 1,
   cameraDistance = 20,
   disableRotation = false,
   pixelRatio = 1,
   className,
-  backgroundColor = '#000000'
+  backgroundColor = '#1a1a1a' /* insted of pure black, more modern i think ... */
 }) => {
   const containerRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0 });
