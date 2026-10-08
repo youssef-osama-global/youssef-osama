@@ -5,6 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/youssef-osama/',
+  build:{
+    cssMinify: false,
+    minify: false,
+  }
 })
 
 /* TODO: add : build: { sourcemap: true, minify: false, cssCodeSplit: false } 
