@@ -1,12 +1,13 @@
 import Particles from './Particles/Particles';
 import HeroContent from './hero-content/hero-content'
+import './hero.css'
 
 function Hero() {
 
   return (
     <>
       <section id='hero-sec'>
-        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+        <div style={{ width: '100%', height: '100vh' , position: 'relative' }}>
         <Particles
         particleColors={["#FBFFFF"]}
         particleCount={200}

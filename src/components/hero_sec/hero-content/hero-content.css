@@ -1,0 +1,21 @@
+div.welcome-sentence {
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  font-size: 6.5rem;
+  white-space: wrap;
+  text-wrap: balance;
+  width: 60%;
+  text-align: center;
+  line-height: 1;
+  background: linear-gradient(180deg, hsl(330, 2%, 43%), hsl(336, 3%, 70%));
+  background-clip: text;
+  color: transparent;
+  opacity: 0.9;
+}
+
+.hero-btns {
+  position: absolute;
+  bottom: 0;
+}
