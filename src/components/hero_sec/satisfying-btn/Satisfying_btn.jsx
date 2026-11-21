@@ -1,10 +1,10 @@
-import './button.css'
+import './satisfying-button.css'
 
 function Satisfying_btn() {
   return (
       <>
         <button id="js-button" className="button">
-          <div className="top">Click me</div>
+          <div className="top">Contact me</div>
           <div className="bottom"></div>
         </button>
       </>

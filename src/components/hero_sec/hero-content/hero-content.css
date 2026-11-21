@@ -1,7 +1,7 @@
 div.welcome-sentence {
   position: absolute;
   left: 50%;
-  top: 47%;
+  top: 46%;
   transform: translate(-50%, -50%);
   font-size: 6.5rem;
   white-space: wrap;
@@ -9,7 +9,7 @@ div.welcome-sentence {
   width: 60%;
   text-align: center;
   line-height: 1;
-  background: linear-gradient(180deg, hsl(330, 2%, 43%), hsl(336, 3%, 70%));
+  background: linear-gradient(180deg, hsl(330, 2%, 46%), hsl(336, 3%, 70%));
   background-clip: text;
   color: transparent;
   opacity: 0.9;
@@ -17,5 +17,50 @@ div.welcome-sentence {
 
 .hero-btns {
   position: absolute;
-  bottom: 0;
+  bottom: 8%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  height: 200px;
 }
+
+.view-projects {
+  
+  isolation: isolate;
+  
+  padding: 0 2rem;
+  border-radius: 15px;
+  /* corner-shape: squircle; */
+  border: 1px solid transparent;
+  backdrop-filter: blur(14px);
+  font-size: 16px;
+  color: hsla(0, 90%, 100%, 0.18);
+
+  background: linear-gradient(hsla(266, 9%, 15%, 0.5), transparent, hsla(266, 9%, 15%, 0.5)) ,
+              linear-gradient(60deg , #525252, hsla(0, 0%, 10%, 0.50)) ;
+              
+  background-origin: padding-box, border-box ;
+  background-clip: padding-box, border-area;
+
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 150px;
+  height: 56px;
+  z-index: 2;
+}
+.view-projects::before{
+  content: "";
+  width: 100px;
+  height: 100px;
+  /* background-color: white; */
+  z-index: -1;
+  position: absolute;
+}
+
+/*TODO: make the before element a particle to give the button some glow effect*/

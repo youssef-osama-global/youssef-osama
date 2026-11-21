@@ -9,8 +9,8 @@ function HeroContent() {
         bla bla bla bla bla bla bla
       </div>
       <div className="hero-btns">
-        <button className="bla">
-
+        <button className="view-projects">
+          aadaervefe
         </button>
         <Satisfying_btn />
         
