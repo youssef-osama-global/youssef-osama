@@ -234,7 +234,7 @@ header nav ul li:hover {
 header nav ul a {
   display: flex;
   text-decoration: none;
-  color: hsl(267, 8%, 60%);
+  color: hsl(267, 8%, 65%);
   transition: all 0.3s ease-in-out;
   align-items: center;
   font-size: 18px;
@@ -330,7 +330,6 @@ header nav ul a:hover {
   display: flex;
   position: fixed;
   flex-direction: column;
-
   height: 100vh;
   gap: 1rem;
   width: 265px;
@@ -340,26 +339,39 @@ header nav ul a:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
   border-left: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 999;
+  padding: 15px;
 
   top: 0;
   right: 0;
 
-
-
 }
 
 .side-nav.closed {
-  transform: translateX(calc(99%));
+  right: -100%;
 }
 
 .side-nav nav ul {
   list-style: none;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
 .side-nav nav ul li a {
   text-decoration: none;
-  color: hsl(267, 8%, 60%);
+  color: var(--text);
 }
+
+.side-nav-close-btn{
+  font-size: 24px;
+  color: var(--text);
+}
+
+
+
+
 
 /*TODO: ADD break point at 750px for side nav bar*/
 

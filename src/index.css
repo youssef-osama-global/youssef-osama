@@ -18,8 +18,7 @@
 
   letter-spacing: 0.18px;
 
-  color: var(--text);
-  background: var(--bg);
+  /* color: var(--text); */
   
 
 }
@@ -32,8 +31,8 @@ body {
   overflow-x: hidden;
 }
 
-#root {
-  
+html{
+  scrollbar-color: hsl(330, 2%, 46%) #1a1a1a; 
 }
 
 section {
