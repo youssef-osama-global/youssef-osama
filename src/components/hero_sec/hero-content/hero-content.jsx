@@ -9,9 +9,11 @@ function HeroContent() {
         bla bla bla bla bla bla bla
       </div>
       <div className="hero-btns">
-        <button className="view-projects">
-          aadaervefe
-        </button>
+        <div className="view-projects-wrap">
+          <button className="view-projects">
+            Software dev :) <span></span>
+          </button>
+        </div>
         <Satisfying_btn />
         
       </div>

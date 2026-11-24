@@ -18,6 +18,7 @@ header {
   z-index: 999 !important;
   transform-origin: center;
   animation: throw-in 1100ms cubic-bezier(0.34, 1.36, 0.64, 1) forwards;
+  
 }
 
 /* animations */
@@ -236,6 +237,7 @@ header nav ul a {
   color: hsl(267, 8%, 60%);
   transition: all 0.3s ease-in-out;
   align-items: center;
+  font-size: 18px;
   height: 100%;
   
 }
@@ -331,8 +333,8 @@ header nav ul a:hover {
 
   height: 100vh;
   gap: 1rem;
-  width: 20%;
-  background: rgba(255, 255, 255, 0.08);
+  width: 265px;
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);

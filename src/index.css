@@ -3,6 +3,7 @@
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-family: var(--sans);
 }
 
 
@@ -14,10 +15,7 @@
   --surface: rgba(26, 26, 26, 0.85);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
 
   color: var(--text);
